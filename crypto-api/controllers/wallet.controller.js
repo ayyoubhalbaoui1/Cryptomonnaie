@@ -4,6 +4,7 @@ const { User } = require("../models");
 const addWallet = async (req, res) => {
   try {
     const idUser = req.body.id;
+    
     const currencyPrice = req.body.currencyPrice;
     const cryptoName = req.body.cryp_name;
     const currencyValue = req.body.value;
