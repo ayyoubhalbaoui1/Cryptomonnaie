@@ -13,7 +13,7 @@ module.exports = (sequelize,DataTypes) => {
     Wallet.associate = models=>{
         Wallet.belongsTo(models.User,{
             foreignKey:{
-                allowNull:false
+                allowNull: false
             }
         })
       }
