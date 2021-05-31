@@ -22,7 +22,7 @@ export default function Sale(props) {
             value,
             wallet_number:walletNumber
         }
-        axios.post(API_HEROKU+'wallet/sell',body,{
+        axios.post(API_URL+'wallet/sell',body,{
             headers: {
                 'auth-token': jwt
             }

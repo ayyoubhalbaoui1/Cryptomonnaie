@@ -30,7 +30,7 @@ export default function Buy(props) {
             "currencyName":coinList.id,
             "value":crpyto
         }
-       await axios.post(API_HEROKU+'wallet/buy',body,{
+       await axios.post(API_URL+'wallet/buy',body,{
             headers: {
                 'auth-token': jwt
             }

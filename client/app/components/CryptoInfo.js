@@ -39,7 +39,7 @@ export default function CryptoInfo(props) {
         if (token) {
 
 
-            axios.get(API_HEROKU + 'user', {
+            axios.get(API_URL + 'user', {
                 headers: {
                     'auth-token': token
                 }

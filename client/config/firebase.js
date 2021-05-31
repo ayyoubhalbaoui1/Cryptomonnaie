@@ -2,12 +2,13 @@ import firebase from 'firebase'
 import config from '../config'
 
 const firebaseConfig = {
-    apiKey: config.API_KEY,
-    authDomain: config.AUTH_DOMAIN,
-    projectId: config.PROJECT_ID,
-    storageBucket: config.STORAGE_BUCKET,
-    messagingSenderId:config. MESSAGE_SENDER_ID,
-    appId: config.APP_ID
+    apiKey: "AIzaSyBCQk2g7uFbLHECWhFwYFW29RKbOZuRPlQ",
+    authDomain: "cryptoc-3a873.firebaseapp.com",
+    projectId: "cryptoc-3a873",
+    storageBucket: "cryptoc-3a873.appspot.com",
+    messagingSenderId: "1035788611788",
+    appId: "1:1035788611788:web:090f2ffde9f4389e76d269"
+
 }
 
 // Initialize Firebase

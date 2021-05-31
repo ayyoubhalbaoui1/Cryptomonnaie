@@ -36,9 +36,9 @@ export default function SignUp() {
                                 style={styles.loginIcon}
                             ></Image>
                             <TextInput style={styles.input}
-                            placeholderTextColor="#93a6b1"
+                            placeholderTextColor="#FFFF"
                                 onChangeText={setEmail}
-                                placeholder="Enter Your Email Here"
+                                placeholder="Email"
                                 autoCapitalize='none'
                                 // autoCompleteType='email'
                                 keyboardType='email-address'
@@ -57,11 +57,11 @@ export default function SignUp() {
                                 style={styles.loginIcon}
                             ></Image>
                             <TextInput style={styles.input}
-                            placeholderTextColor="#93a6b1"
+                            placeholderTextColor="#FFFF"
                                 onChangeText={setPassword}
                                 autoCapitalize='none'
                                 secureTextEntry={true}
-                                placeholder="Enter Your password Here"
+                                placeholder="Passwd"
                             ></TextInput>
                         </View>
                         
@@ -69,7 +69,7 @@ export default function SignUp() {
                     <TouchableOpacity style={styles.loginBtn} onPress={() => signUpUser()}>
                         <Text style={styles.txtBtn} >Sign Up</Text>
                     </TouchableOpacity>
-                    <Text style={styles.text} >Not the first time here ? <Text style={styles.textSignUp}  onPress={() => history.push('/')}>Login</Text></Text>
+                    <Text style={styles.text} ><Text style={styles.textSignUp}  onPress={() => history.push('/')}>Login</Text></Text>
                 </View>
             </ScrollView>
         </KeyboardAvoidingView>

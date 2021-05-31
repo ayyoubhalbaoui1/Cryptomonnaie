@@ -9,7 +9,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import firebase from '../../config/firebase'
 import axios from 'axios'
 // import {API_URL,API_KEY} from '../../config'
-import { API_URL,API_HEROKU } from '@env'
+import { API_URL,API_HEROKU,API_KEY } from '@env'
 import Loading from '../shared/Loading'
 import getInfoAboutCurrenct from '../data/GetData';
 
@@ -18,6 +18,7 @@ const emailImg = require('../../assets/email2.png')
 const passwordLock = require('../../assets/passwordLock.png')
 
 export default function SignIn(props) {
+    console.log(API_KEY);
     const history = useHistory()
     const [email, setEmail] = useState('')
     const [loading, setLoading] = useState(false)
@@ -27,7 +28,7 @@ export default function SignIn(props) {
 
    async function testApi() {
         try {
-            const newUser = await axios.post(API_HEROKU + 'user/add/12'  )
+            const newUser = await axios.post(API_URL + 'user/add/12'  )
                 .then(response => {
                     console.log(response.data);
                     
@@ -48,7 +49,7 @@ export default function SignIn(props) {
 
                 console.log(user.user.uid)
                 try {
-                    const newUser = await axios.post(API_HEROKU+'user/add/' + user.user.uid)
+                    const newUser = await axios.post(API_URL+'user/add/' + user.user.uid)
                         .then(response => {
                             setLoading(false)
                             console.log(response.data.token);
@@ -91,7 +92,7 @@ export default function SignIn(props) {
                     !loading  ?
                     <>
                     <View style={styles.loginView}>
-                        <Text style={styles.loginText}>Log in</Text>
+                        <Text style={styles.loginText}>Sign in</Text>
                         <View style={styles.inputSection}>
                             <Image
                                 source={emailImg}
@@ -100,9 +101,9 @@ export default function SignIn(props) {
                             <TextInput style={styles.input}
                                 onChangeText={setEmail}
                                 textAlign='center'
-                                placeholder="Enter Your Email Here"
+                                placeholder="Email"
                                 autoCapitalize='none'
-                                placeholderTextColor="#93a6b1"
+                                placeholderTextColor="#FFFF"
                                 // autoCompleteType='email'
                                 keyboardType='email-address'
                             ></TextInput>
@@ -117,18 +118,18 @@ export default function SignIn(props) {
                                 style={styles.loginIcon}
                             ></Image>
                             <TextInput style={styles.input}
-                            placeholderTextColor="#93a6b1"
+                            placeholderTextColor="#FFFF"
                                 onChangeText={setPassword}
                                 secureTextEntry={true}
-                                placeholder="Enter Your password Here"
+                                placeholder="Password"
                             ></TextInput>
                         </View>
 
                     </View>
                     <TouchableOpacity style={styles.loginBtn} onPress={() => login()} >
-                        <Text style={styles.txtBtn} >Sign In</Text>
+                        <Text style={styles.txtBtn} >Log In</Text>
                     </TouchableOpacity>
-                    <Text style={styles.text} >First time here ? <Text style={styles.textSignUp} onPress={() => history.push('/sign-up')}>Sign up</Text></Text>
+                    <Text style={styles.text} ><Text style={styles.textSignUp} onPress={() => history.push('/sign-up')}>Sign up</Text></Text>
                     </>
                     :<Loading title="login ..."/>
                     }

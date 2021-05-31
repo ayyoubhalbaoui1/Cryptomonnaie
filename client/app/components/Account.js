@@ -7,7 +7,7 @@ import AccountRows from './AccountRows'
 const userImage = require('../../assets/user-icon.png')
 const { height, width } = Dimensions.get("screen")
 import axios from 'axios'
-import { API_HEROKU } from '@env';
+import { API_HEROKU,API_URL } from '@env';
 
 
 export default function Account(props) {
@@ -17,7 +17,7 @@ export default function Account(props) {
     const [user, setUser] = useState([])
     const [wallets, setWallets] = useState()
     function getUser() {
-        axios.get(API_HEROKU + 'user', {
+        axios.get(API_URL + 'user', {
             headers: {
                 'auth-token': jwt
             }
@@ -50,7 +50,7 @@ export default function Account(props) {
             {
                 user && user ?
                     <>
-                        <View style={{ backgroundColor: 'white', borderRadius: 50, height: 80, width: 80, justifyContent: 'center', alignItems: 'center' }}>
+                        <View style={{ backgroundColor: 'white', borderRadius: 50, height: 60, width: 0, justifyContent: 'center', alignItems: 'center' }}>
                             <Image
                                 style={[styles.img, { tintColor: "#000", width: 50, height: 50 }]}
                                 source={userImage}
@@ -59,23 +59,23 @@ export default function Account(props) {
 
 
 
-                        <Text style={{ color: '#93a6b1', marginTop: 15, fontSize: 18 }}>test@gmail.com</Text>
+                        <Text style={{ color: '#FFFF', marginTop: 15, fontSize: 18 }}>Profile</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: width / 1.2, alignItems: 'center', marginTop: 25 }}>
                             <View
                                 style={{ textAlign: 'center', justifyContent: 'center', }}
                             >
-                                <Text style={{ color: '#767576', fontSize: 18 }}>sold</Text>
-                                <Text style={{ color: '#767576' }}>{user.solde}</Text>
+                                <Text style={{ color: '#FFFF', fontSize: 18 }}>sold</Text>
+                                <Text style={{ color: '#FFFF' }}>{user.solde}</Text>
                             </View>
                             <View>
-                                <Text style={{ color: '#2f2f2f', fontSize: 20 }}>|</Text>
+                                <Text style={{ color: '#FFFF', fontSize: 20 }}>|</Text>
                             </View>
                             <View>
-                                <Text style={{ color: '#767576', fontSize: 18 }}>{user.localCrncy}</Text>
-                                {/* <Text style={{color:'#767576'}}>5000</Text> */}
+                                <Text style={{ color: '#FFFF', fontSize: 18 }}>{user.localCrncy}</Text>
+                                {/* <Text style={{color:'#FFFF'}}>5000</Text> */}
                             </View>
                             <View>
-                                <Text style={{ color: '#2f2f2f', fontSize: 20 }}>|</Text>
+                                <Text style={{ color: '#FFFF', fontSize: 20 }}>|</Text>
                             </View>
                             <View>
                                 <TouchableOpacity onPress={() => history.push({
@@ -83,7 +83,7 @@ export default function Account(props) {
                                     state: { jwt: jwt, wallets: wallets }
                                 })}>
 
-                                    <Text style={{ color: '#767576', fontSize: 18 }}>sale</Text>
+                                    <Text style={{ color: '#FFFF', fontSize: 18 }}>sale</Text>
                                 </TouchableOpacity>
                             </View>
 
@@ -104,7 +104,7 @@ export default function Account(props) {
                             onPress={() => history.push('/')}
                         >
 
-                            <Text style={{ color: '#93a6b1', fontSize: 18, marginVertical: 15 }}>log out</Text>
+                            <Text style={{ color: '#FFFF', fontSize: 18, marginVertical: 15 }}>log out</Text>
                         </TouchableOpacity>
                     </>
                     : <Text>please restart the app</Text>

@@ -4,7 +4,7 @@ const { height, width } = Dimensions.get("screen")
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#252525",
+        backgroundColor: "#6272a4",
         height: height,
         color: 'white',
         alignItems: 'center',
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
         width: width,
         flexDirection: "row",
         justifyContent: "space-between",
-        borderBottomColor: '#b98a56',
+        borderBottomColor: '#FFFF',
         borderWidth: 5,
         borderTopWidth: 0,
         borderRightWidth: 0,
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
     // justifyContent: 'center',
     alignItems: 'center',
-    borderBottomColor :'#b98a56',
+    borderBottomColor :'#FFFF',
     borderBottomWidth: 1,
     marginVertical:35,
     maxWidth:230,
@@ -69,10 +69,9 @@ export const styles = StyleSheet.create({
         height:25
     },
     loginBtn:{
-        backgroundColor:'#353535',
+        backgroundColor:'#6272a4',
         height:45,
         width:135,
-        borderRadius:24,
         alignItems:'center',
         justifyContent:'center'
     },
@@ -83,10 +82,13 @@ export const styles = StyleSheet.create({
         color:'#93a6b1'
     },
     backBar:{
-        backgroundColor:'#252525',
-        padding:35
+        backgroundColor:'#6272a4',
+        padding:40
         // marginTop: Constanse.statusBarHeight,
     },
+   
+   
+    
     loadingContainer:{
         justifyContent: 'center',
         alignItems: 'center',
@@ -94,7 +96,7 @@ export const styles = StyleSheet.create({
         backgroundColor:'transparent',
     },
     buyBtn:{
-        backgroundColor:'#b98a56',
+        backgroundColor:'#FFFF',
         borderRadius:12,
         padding:3,
         justifyContent: 'center',
@@ -112,7 +114,7 @@ export const styles = StyleSheet.create({
         
     },
     buyInput:{
-        borderColor:'#b98a56',
+        borderColor:'#FFFF',
         borderWidth:1,
         width:width / 1.3,
         borderRadius:12,
@@ -122,14 +124,14 @@ export const styles = StyleSheet.create({
         color:'white'
     },
     serctionAccountIcon:{
-        backgroundColor:'#252525',
+        backgroundColor:'#6272a4',
         padding:5,
         paddingTop:Constanse.statusBarHeight,
         flexDirection: "row",
         justifyContent: 'flex-end'
     },
     accountBtn:{
-        backgroundColor: '#b98a56',
+        backgroundColor: '#FFFF',
         borderRadius: 12,
         padding: 3,
         justifyContent: 'center',

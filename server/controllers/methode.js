@@ -7,5 +7,6 @@ function RandomSerie(length) {
     }
     return result;
 }
+console.log(RandomSerie(6));
 
 module.exports = {RandomSerie}
