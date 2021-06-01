@@ -21,33 +21,33 @@ export const styles = StyleSheet.create({
     },
     section: {
         height: 90,
-        backgroundColor: '#353535',
+        backgroundColor: '#6272a4',
         paddingTop: 25,
-        paddingHorizontal: 15,
+        paddingHorizontal: 10,
         width: width,
         flexDirection: "row",
         justifyContent: "space-between",
-        borderBottomColor: '#FFFF',
-        borderWidth: 5,
+        borderBottomColor: '#f1fa8c',
+        borderWidth: 3,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
         marginVertical: 15,
         width: width / 1.1,
-        borderRadius:10,
+        borderRadius:0,
         alignItems:'center'
     },
     name:{
         marginTop:3
     },
     loginView:{
-        marginTop:95
+        marginTop:200
     },
     loginText:{
         color:'#fcfcfc',
-        fontSize:32,
-        marginRight:150,
-        marginBottom:45
+        fontSize:25,
+        marginRight:200,
+        marginBottom:100
     },
     inputSection:{
         flexDirection: 'row',

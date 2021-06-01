@@ -72,7 +72,7 @@ export default function Sale(props) {
                     onPress={() => sell()}
                 >
 
-                    <Text style={{ fontSize: 25, color: '#fff' }}>sell</Text>
+                    <Text style={{ fontSize: 25, color: '#333' }}>sell</Text>
                 </TouchableOpacity>
         </View>
     )

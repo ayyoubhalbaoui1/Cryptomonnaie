@@ -88,7 +88,7 @@ export default function Statistic(props) {
 })}
   >
 
-  <Text style={{fontSize:25,color:'#fff'}}>Buy</Text>
+  <Text style={{fontSize:25,color:'#333'}}>Buy</Text>
   </TouchableOpacity>
   </>
   :
