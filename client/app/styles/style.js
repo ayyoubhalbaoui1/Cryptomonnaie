@@ -41,13 +41,14 @@ export const styles = StyleSheet.create({
         marginTop:3
     },
     loginView:{
-        marginTop:200
+        marginTop:100
     },
     loginText:{
         color:'#fcfcfc',
         fontSize:25,
         marginRight:200,
-        marginBottom:100
+        marginBottom:100, 
+        fontWeight:'bold'
     },
     inputSection:{
         flexDirection: 'row',
@@ -73,7 +74,7 @@ export const styles = StyleSheet.create({
         height:45,
         width:135,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
     },
     txtBtn:{
         color:'white'
